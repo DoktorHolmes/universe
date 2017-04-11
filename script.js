@@ -153,50 +153,52 @@ function addToDialog(textToAdd){
 
 function showDialog(system, plan, x, y){
 	dialogBox = document.getElementById("dialogbox");
+	coordsBox = document.getElementById("coordsBox");
 	dialogBox.innerHTML = "";
 	locationStatus = document.getElementById("locationStatus");
-	locationStatus.innerHTML = "Current coordinates: " + x + ", " + y + " on the planet " + plan.name + ", in the " + system.name + " system."
+	coordsBox.innerHTML = x + ", " + y;
+	locationStatus.innerHTML = "On the planet " + plan.name + ", in the " + system.name + " system."
 	if(plan.tiles[x][y].biome == "woods"){
-		addToDialog("You are in a shaded forest of evergreen trees.  No sound can be heard but the wind rustling through the trees.  <br><br>")
+		addToDialog("You are in a shaded forest of evergreen trees.  No sound can be heard but the wind rustling through the trees. ")
 	}
 	
 	else if(plan.tiles[x][y].biome == "a tundra"){
-		addToDialog("You are in a desolate tundra.  Snow blankets the ground here, and sparse, dying trees dot the landscape.  <br><br>")
+		addToDialog("You are in a desolate tundra.  Snow blankets the ground here, and sparse, dying trees dot the landscape.  ")
 	}
 	else if(plan.tiles[x][y].biome == "a field"){
-		addToDialog("You are in a grassy field, with the occasional flower poking out of the dirt.  Life perseveres, even here.  <br><br>")
+		addToDialog("You are in a grassy field, with the occasional flower poking out of the dirt.  Life perseveres, even here.  ")
 	}
 	else if(plan.tiles[x][y].biome == "a savannah"){
-		addToDialog("You are in a savannah, though the beastly creatures who usually inhabit this sort of place have long since moved on.  <br><br>")
+		addToDialog("You are in a savannah, though the beastly creatures who usually inhabit this sort of place have long since moved on.  ")
 	}
 	else if(plan.tiles[x][y].biome == "a lake"){
-		addToDialog("You are on the shore of a peaceful lake, surrounded by evergreen trees.  The only sound is the lapping of the water against the shore.  <br><br>")
+		addToDialog("You are on the shore of a peaceful lake, surrounded by evergreen trees.  The only sound is the lapping of the water against the shore.  ")
 	}
 	if(plan.tiles[x][y].weather != "clear"){
-		addToDialog("It is " + plan.weather + " here.  <br><br>")
+		addToDialog("It is " + plan.weather + " here.  ")
 	}
 	else{
-		addToDialog("The sky is " + plan.weather + " here.  <br><br>")
+		addToDialog("The sky is " + plan.weather + " here.  ")
 	}
 	if(plan.tiles[x][y].structures.length > 0){
 	for(var i = 0; i < plan.tiles[x][y].structures.length; i++){
 		if(plan.tiles[x][y].structures[i] == "crudehouse"){
-			addToDialog("Your house is here, a lonely refuge amongst the endless void.  <br><br>")
+			addToDialog("Your house is here, a lonely refuge amongst the endless void.  ")
 		}
 		if(plan.tiles[x][y].structures[i] == "campfire"){
-			addToDialog("A warm campfire keeps the cold at bay.  <br><br>")
+			addToDialog("A warm campfire keeps the cold at bay.  ")
 		}
 		if(plan.tiles[x][y].structures[i] == "villageruins"){
-			addToDialog("The ruins of an ancient village sit here, abandoned by their inhabitants centuries ago.  <br><br>")
+			addToDialog("The ruins of an ancient village sit here, abandoned by their inhabitants centuries ago.  ")
 		}
 		if(plan.tiles[x][y].structures[i] == "wildlife"){
-			addToDialog("Small alien animals dart around this place.  You welcome the company.  <br><br>")
+			addToDialog("Small alien animals dart around this place.  You welcome the company.  ")
 		}
 		if(plan.tiles[x][y].structures[i] == "abandonedcamp"){
-			addToDialog("An abandoned campsite rests here, its denizens gone without a trace.  Minus the campsite itself, of course.  <br><br>")
+			addToDialog("An abandoned campsite rests here, its denizens gone without a trace.  Minus the campsite itself, of course.  ")
 		}
 		if(plan.tiles[x][y].structures[i] == "mushroomtrees"){
-			addToDialog("A small forest of tree-sized mushrooms has grown here.  They're somewhere on every planet, though nobody knows how they spread across the void.  <br><br>")
+			addToDialog("A small forest of tree-sized mushrooms has grown here.  They're somewhere on every planet, though nobody knows how they spread across the void.  ")
 		}
 	}
 	}
@@ -228,20 +230,20 @@ function calculatePlayerHour(){
 			
 		}
 	}
-	addToDialog("<br><br>The time is "+ player1.locationPlanet.time + "00 hours.  ");
+	addToDialog("The time is "+ player1.locationPlanet.time + "00 hours.  ");
 	
 	if(player1.locationPlanet.time == 0){
-		addToDialog("<br><br>Midnight has fallen.  ")
+		addToDialog("Midnight has fallen.  ")
 	}
 	else if(player1.locationPlanet.time == Math.floor(player1.locationPlanet.dayLength / 2)){
-		addToDialog("<br><br>It is noon.  ")
+		addToDialog("It is noon.  ")
 	}
 	else if(player1.locationPlanet.time == Math.floor(player1.locationPlanet.dayLength - (player1.locationPlanet.dayLength / 4))){
-		addToDialog("<br><br>The sun sinks below the horizon.  ")
+		addToDialog("The sun sinks below the horizon.  ")
 	}
 	
 	else if(player1.locationPlanet.time == Math.floor(0 + (player1.locationPlanet.dayLength / 4))){
-		addToDialog("<br><br>The sun rises over the horizon.  ")
+		addToDialog("The sun rises over the horizon.  ")
 	}
 	
 	
