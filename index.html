@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <title>Universe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="main">
+  <h1>Universe</h1>
+  <div id="test"></div>
+  </div>
+  <div id="dialogbox">
+  </div>
+  <div id="locationStatus"></div>
+  <div id="demo"></div>
+  <div id="controls">
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+	<ul>
+	
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<button onclick="goNorth()">North</button>
+	</p>
+	<p>&nbsp;&nbsp;
+	<button onclick="goWest()">West</button>
+	<button onclick="goEast()">East</button>
+	</p>
+	<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<button onclick="goSouth()">South</button>
+	</p>
+	<audio id="Dialogue"></audio>
+	<audio id="Ambience"></audio>
+	</ul>
+  </div>
+  <button onclick="warpToPlanet()" class="dropbtn">Warp to planet</button>
+  <button onclick="wait()">Wait an hour</button>
+  <select id="planetDropdown">
+  </select>
+  <div id="stats">
+  
+
+  </div>
+	<input id="commandBox"></input>
+    <script src="jquery.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
