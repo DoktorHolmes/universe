@@ -347,5 +347,5 @@ function checkInput(val){
 }
 
    
-//TRAVELING FUNCTIONS
+//REMOVE ME
 
