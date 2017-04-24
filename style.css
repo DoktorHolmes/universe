@@ -1,5 +1,51 @@
-@charset "UTF-8";
-
-#test {
-  color: gray;
+html,
+body {
+    background-color: black;
+    color: white;
+}
+#controls {
+    position: fixed;
+    left: 500px;
+    top: 430px;
+    width: 400px;
+    height: 400px;
+}
+#WestButton {
+    position: absolute;
+    left: -60px;
+}
+#EastButton {
+    position: absolute;
+    top: 37px;
+    left: 60px;
+}
+#coordsBox {
+    
+}
+#locationStatus {
+	position: fixed;
+    top: 400px;
+    text-align: center;
+    left: 375px;
+}
+#dialogbox {
+    height: 300px;
+    width: 500px;
+	border-style: groove;
+    border-color: white;
+}
+#warpPlanetButton{
+	position: fixed;
+    top: 400px;
+    left: 80px;
+}
+#planetDropdown{
+    position: fixed;
+    top: 400px;
+    left: 200px;
+}
+#waitButton{
+	position: fixed;
+    top: 500px;
+    left: 135px;
 }
