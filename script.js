@@ -174,6 +174,12 @@ function showDialog(system, plan, x, y){
 	else if(plan.tiles[x][y].biome == "a lake"){
 		addToDialog("You are on the shore of a peaceful lake, surrounded by evergreen trees.  The only sound is the lapping of the water against the shore.  ")
 	}
+	else if(plan.tiles[x][y].biome == "wasteland"){
+		addToDialog("The land here is made up of miles of nothing but barren rock.  ")
+	}
+	else if(plan.tiles[x][y].biome == "wasteland cliff"){
+		addToDialog("You are standing on the edge of .  ")
+	}
 	if(plan.tiles[x][y].weather != "clear"){
 		addToDialog("It is " + plan.weather + " here.  ")
 	}
